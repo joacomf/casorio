@@ -7,3 +7,104 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
+.seccion-principal {
+    background: url("/assets/img/fondo-principal.svg") 0 0 no-repeat;
+    transition: background 0.5s ease 0s;
+}
+
+.seccion-principal.hover {
+    background-position-y: 15%;
+}
+
+.sobre {
+    position: relative;
+}
+
+.sobre .solapa {
+    position: absolute;
+    z-index: 0;
+}
+
+.sobre .solapa .dorso {
+    background-color: #E9EAD0;
+    margin-top: -1px;
+    height: 30px;
+    width: 100%;
+}
+
+.sobre .interior {
+    padding: 14px 0 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.sobre .carta {
+    position: absolute;
+    margin: 0 auto;
+    width: 85%;
+    top: 20%;
+    left: 10px;
+    right: 0;
+    z-index: 3;
+
+    background: #FDFDFD;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: top 0.5s ease 0s;
+}
+
+.sobre:hover .carta {
+    top: 0;
+}
+
+.sobre .carta .interior {
+    padding: 12px 12px 0;
+}
+
+.sobre .carta .interior .texto {
+    margin-top: 22px;
+    display: inline-block;
+    width: 65%;
+    text-align: right;
+}
+.sobre .carta .interior .ampersan {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    vertical-align: top;
+
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 141px;
+    line-height: 163px;
+
+    color: #D9ECEC;
+}
+
+.sobre .carta .interior .texto .letras {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 63px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0;
+    text-align: right;
+    color: #3A7581;
+}
+
+.sobre .carta .fecha {
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: -10px;
+    padding-bottom: 30px;
+
+    color: #5E6C6F;
+}
+
+.sobre .cuerpo {
+    position: absolute;
+    bottom: -27px;
+    left: -20px;
+    z-index: 4;
+}
