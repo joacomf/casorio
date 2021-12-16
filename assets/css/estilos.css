@@ -9,7 +9,7 @@ html, body {
 }
 
 .seccion-principal {
-    background: url("/assets/img/fondo-principal.svg") 0 0 no-repeat;
+    background: url("../img/fondo-principal.svg") 0 0 no-repeat;
     transition: background 0.5s ease 0s;
 }
 
