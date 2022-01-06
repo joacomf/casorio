@@ -10,13 +10,14 @@
 
 
     --verde-oscuro: #329363;
-    --verde-claro: #8bafaf;
+    --verde-claro: #94DFC0;
     --blanco: #FFFFFF;
 
     --fondo-carta: #FDFDFD;
-    --color-carta-dorso: #E9EAD0;
-    --color-letras-carta: #3A7581;
+    --color-carta-dorso: #B1DBCE;
+    --color-letras-carta: #000000;
     --color-fecha-carta: #5E6C6F;
+    --color-ampersan-carta: #94DFC0;
 }
 
 html, body {
@@ -26,6 +27,14 @@ html, body {
 
 .fondo-hojas {
     background: var(--fondo-principal-1) 0 0 no-repeat, var(--fondo-principal-2) 0 0 repeat-y;
+}
+
+body {
+    transition: background 0.5s ease 0s;
+}
+
+body.animado {
+    background-position-y: 5%;
 }
 
 .seccion {
@@ -74,8 +83,16 @@ html, body {
     background: var(--fondo-subrayado) 0 0 no-repeat;
 }
 
-.seccion-principal.hover {
-    background-position-y: 12%;
+.flecha-verde-abajo {
+    position: absolute;
+    margin-top: 2.9rem;
+    right: -2rem;
+}
+
+.flecha-gris-abajo {
+    position: absolute;
+    margin-top: 2.9rem;
+    left: -9rem;
 }
 
 .sobre {
@@ -143,7 +160,7 @@ html, body {
     font-size: 8.813rem;
     line-height: 163px;
 
-    color: #D9ECEC;
+    color: var(--color-ampersan-carta);
 }
 .sobre .carta .interior .texto .letras {
     font-family: var(--tipografia-yesenova);
@@ -173,9 +190,6 @@ html, body {
 }
 
 @media (max-width: 600px) {
-
-
-
     .sobre .carta {
         top: 12%;
     }

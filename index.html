@@ -16,27 +16,43 @@
     <link href="assets/css/estilos.css" rel="stylesheet">
 </head>
 <body class="fondo-hojas">
-<section class="seccion pb-5 pt-5 h-100 d-flex align-items-center">
+<section class="seccion h-100 d-flex align-items-center">
     <div class="container">
         <div class="row">
             <div class="col-6 offset-3">
                 <h1 class="fuente-yesenova texto-xl subrayado-hola">¡Hola!</h1>
-                <h1 class="fuente-gloria texto-l mt-4 ms-4 separacion-lineas">Estamos <span class="verde-oscuro">muuy felices</span> de contarte que...</h1>
+                <h1 class="fuente-gloria texto-l mt-4 ms-4 separacion-lineas position-relative">
+                    Estamos <span class="verde-oscuro">muuy felices</span> de contarte que...
+                    <img class="flecha-verde-abajo" src="assets/img/flecha-abajo-verde.svg" alt="flecha-abajo"/>
+                </h1>
             </div>
         </div>
     </div>
 </section>
-<section class="seccion pb-5 pt-5 h-100">
+<section class="seccion h-100 d-flex align-items-center mb-4">
     <div class="container">
-        Casamiento!
+        <div class="row mb-5 mt-5">
+            <div class="col-md-4 offset-md-4 text-center">
+                <img src="assets/img/anillos.svg" alt="anillos"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="fuente-yesenova texto-xl">¡NOS CASAMOS!</h1>
+                <h1 class="fuente-gloria texto-l mt-4 ms-4 separacion-lineas position-relative">
+                    y te queremos invitar a compartirlo juntos
+                    <img class="flecha-gris-abajo" src="assets/img/flecha-abajo-gris.svg" alt="flecha-abajo"/>
+                </h1>
+            </div>
+        </div>
     </div>
 </section>
-<section class="seccion h-100">
+<section class="seccion h-100 pt-5 pb-5">
     <div class="container-fluid d-flex align-items-center h-100">
         <div class="m-auto">
             <div class="sobre d-block" id="sobre">
                 <div class="solapa">
-                    <img src="assets/img/solapa-sobre.svg" alt="interior"/>
+                    <img src="assets/img/solapa-carta.svg" alt="interior"/>
                     <div class="dorso"></div>
                 </div>
                 <div class="interior">
@@ -55,7 +71,7 @@
                     <div class="fecha">13 marzo 2022</div>
                 </div>
                 <div class="cuerpo">
-                    <img src="assets/img/cuerpo-sobre.svg" alt="interior"/>
+                    <img src="assets/img/cuerpo-carta.svg" alt="interior"/>
                 </div>
             </div>
         </div>
@@ -65,15 +81,15 @@
 
 <script>
     const sobre = document.getElementById("sobre");
-    const seccionPrincipal = document.getElementById("seccion-principal");
+    const cuerpoDocumento = document.body;
 
 
     sobre.addEventListener("mouseenter", function() {
-        seccionPrincipal.classList.add("hover");
+        cuerpoDocumento.classList.add("animado");
     }, false);
 
     sobre.addEventListener("mouseleave", function() {
-        seccionPrincipal.classList.remove("hover");
+        cuerpoDocumento.classList.remove("animado");
     }, false);
 </script>
 </body>
