@@ -27,6 +27,7 @@ html, body {
 
 .fondo-hojas {
     background: var(--fondo-principal-1) 0 0 no-repeat, var(--fondo-principal-2) 0 0 repeat-y;
+    background-size: cover;
 }
 
 body {
@@ -62,13 +63,13 @@ body.animado {
     font-family: var(--tipografia-yesenova);
 }
 
-.texto-xl {
-    font-size: 4rem;
-}
+    .texto-xl {
+        font-size: 4rem;
+    }
 
-.texto-l {
-    font-size: 3rem;
-}
+    .texto-l {
+        font-size: 3rem;
+    }
 
 .separacion-lineas {
     line-height: 4.75rem;
@@ -190,6 +191,27 @@ body.animado {
 }
 
 @media (max-width: 600px) {
+    .flecha-verde-abajo {
+        height: 6rem;
+    }
+
+    .flecha-gris-abajo {
+        height: 8rem;
+        left: -2rem;
+    }
+
+    .texto-xl {
+        font-size: 3.5rem;
+    }
+
+    .texto-l {
+        font-size: 2.3rem;
+    }
+
+    .subrayado-hola::after {
+        width: 45%;
+    }
+
     .sobre .carta {
         top: 12%;
     }
