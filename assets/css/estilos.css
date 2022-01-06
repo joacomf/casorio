@@ -10,6 +10,7 @@
 
 
     --verde-oscuro: #329363;
+    --verde-musgo: #5A8D7D;
     --verde-claro: #94DFC0;
     --blanco: #FFFFFF;
 
@@ -43,7 +44,12 @@ body.animado {
 }
 
 .fondo-verde {
-    background-color: var(--verde-claro);
+    background-color: var(--verde-musgo);
+    color: var(--blanco);
+}
+
+.fondo-verde:hover {
+    background-color: var(--verde-musgo);
     color: var(--blanco);
 }
 
@@ -60,19 +66,40 @@ body.animado {
 }
 
 .fuente-arsenal {
-    font-family: var(--tipografia-yesenova);
+    font-family: var(--tipografia-arsenal);
 }
 
-    .texto-xl {
-        font-size: 4rem;
-    }
+.texto-xl {
+    font-size: 4rem;
+}
 
-    .texto-l {
-        font-size: 3rem;
-    }
+.texto-l {
+    font-size: 3rem;
+}
+
+.texto-m {
+    font-size: 1.3rem;
+}
+
+.texto-s {
+    font-size: 1rem;
+}
 
 .separacion-lineas {
     line-height: 4.75rem;
+}
+
+.separacion-lineas-s {
+    line-height: 2rem;
+}
+
+.boton {
+    font-family: var(--tipografia-yesenova);
+    text-align: center;
+    padding: 0.9rem 3.8rem;
+    border-radius: 9px;
+    border: 0;
+    font-size: 1.5rem;
 }
 
 .subrayado-hola::after {
