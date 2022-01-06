@@ -1,16 +1,77 @@
+:root {
+    --tipografia-yesenova: 'Yeseva One', sans-serif;
+    --tipografia-gloria: 'Gloria Hallelujah', sans-serif;
+    --tipografia-arsenal: 'Arsenal', sans-serif;
+
+    --fondo-principal-1: url("../img/fondo-principal-1.png");
+    --fondo-principal-2: url("../img/fondo-principal-2.png");
+
+    --fondo-subrayado: url("../img/subrayado-hola.svg");
+
+
+    --verde-oscuro: #329363;
+    --verde-claro: #8bafaf;
+    --blanco: #FFFFFF;
+
+    --fondo-carta: #FDFDFD;
+    --color-carta-dorso: #E9EAD0;
+    --color-letras-carta: #3A7581;
+    --color-fecha-carta: #5E6C6F;
+}
+
 html, body {
     height: 100%;
     width: 100%;
 }
 
+.fondo-hojas {
+    background: var(--fondo-principal-1) 0 0 no-repeat, var(--fondo-principal-2) 0 0 repeat-y;
+}
+
 .seccion {
-    height: 100%;
     width: 100%;
 }
 
-.seccion-principal {
-    background: url("../img/fondo-principal.svg") 0 0 no-repeat;
-    transition: background 0.5s ease 0s;
+.fondo-verde {
+    background-color: var(--verde-claro);
+    color: var(--blanco);
+}
+
+.verde-oscuro {
+    color: var(--verde-oscuro);
+}
+
+.fuente-yesenova {
+    font-family: var(--tipografia-yesenova);
+}
+
+.fuente-gloria {
+    font-family: var(--tipografia-gloria);
+}
+
+.fuente-arsenal {
+    font-family: var(--tipografia-yesenova);
+}
+
+.texto-xl {
+    font-size: 4rem;
+}
+
+.texto-l {
+    font-size: 3rem;
+}
+
+.separacion-lineas {
+    line-height: 4.75rem;
+}
+
+.subrayado-hola::after {
+    content: "";
+    display: block;
+    margin-left: 15px;
+    height: 20px;
+    width: 100%;
+    background: var(--fondo-subrayado) 0 0 no-repeat;
 }
 
 .seccion-principal.hover {
@@ -31,7 +92,7 @@ html, body {
 }
 
 .sobre .solapa .dorso {
-    background-color: #E9EAD0;
+    background-color: var(--color-carta-dorso);
     margin-top: -0.063rem;
     height: 30px;
     width: 100%;
@@ -52,7 +113,7 @@ html, body {
     right: 0;
     z-index: 3;
 
-    background: #FDFDFD;
+    background: var(--fondo-carta);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     transition: top 0.5s ease 0s;
 }
@@ -78,35 +139,32 @@ html, body {
     text-align: center;
     vertical-align: top;
 
-    font-family: 'Yeseva One', sans-serif;
+    font-family: var(--tipografia-yesenova);
     font-size: 8.813rem;
     line-height: 163px;
 
     color: #D9ECEC;
 }
-
 .sobre .carta .interior .texto .letras {
-    font-family: 'Yeseva One', sans-serif;
+    font-family: var(--tipografia-yesenova);
     font-size: 3.938rem;
     font-style: normal;
     font-weight: 400;
     line-height: 50px;
     letter-spacing: 0;
     text-align: right;
-    color: #3A7581;
+    color: var(--color-letras-carta);
 }
-
 .sobre .carta .fecha {
-    font-family: 'Yeseva One', sans-serif;
+    font-family: var(--tipografia-yesenova);
     font-size: 22px;
     line-height: 25px;
     text-align: center;
     margin-top: -10px;
     padding-bottom: 30px;
 
-    color: #5E6C6F;
+    color: var(--color-fecha-carta);
 }
-
 .sobre .cuerpo {
     width: 100%;
     position: absolute;
@@ -115,19 +173,20 @@ html, body {
 }
 
 @media (max-width: 600px) {
+
+
+
     .sobre .carta {
         top: 12%;
     }
-
     .sobre:hover .carta {
         top: -10%;
     }
-
     .sobre .carta .interior .texto .letras {
         font-size: 3.738rem;
     }
-
     .sobre .carta .interior .ampersan {
         font-size: 7.313rem;
     }
 }
+
