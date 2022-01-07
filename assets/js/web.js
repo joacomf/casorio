@@ -2,7 +2,6 @@ function movimientoDeFondoAlPasarMouseSobreCarta() {
     const sobre = $("#sobre");
     const cuerpoDocumento = $("body");
 
-
     sobre.on('mouseenter', function () {
         cuerpoDocumento.addClass("animado");
     });
@@ -10,7 +9,6 @@ function movimientoDeFondoAlPasarMouseSobreCarta() {
     sobre.on('mouseleave', function () {
         cuerpoDocumento.removeClass("animado");
     });
-    return fechaCasorio;
 }
 
 function inicializarCuentaAtras() {
@@ -52,11 +50,20 @@ function inicializarCuentaAtras() {
 }
 
 function copiarAClipboard(valor) {
-    navigator.clipboard.writeText(valor);
+    navigator.clipboard.writeText(valor)
+        .then(() => alert("Se copió el CBU " + valor + " exitosamente"));
+}
 
-    alert("Se copió el CBU " + valor + " exitosamente");
+function obtenerNombre() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    if (urlParams.has('n')) {
+        const nombre = urlParams.get('n');
+        $("#nombrePersona").html(", " + nombre);
+    }
 }
 
 inicializarCuentaAtras();
 movimientoDeFondoAlPasarMouseSobreCarta();
-
+obtenerNombre();
