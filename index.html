@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Casamiento Meli + Joaco</title>
+    <title>Meli & Joaco</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -101,18 +101,47 @@
     </div>
 </section>
 
-<script>
-    const sobre = document.getElementById("sobre");
-    const cuerpoDocumento = document.body;
+<section class="seccion d-flex align-items-center pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 col-10 offset-1">
+                <h1 class="fuente-yesenova texto-l mb-5">Faltan...</h1>
+                <div id="contenedor_cuenta_atras"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="seccion d-flex align-items-center mt-5 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-0 offset-md-0 col-10 offset-1 mb-5 mb-sm-0 d-flex align-items-start justify-content-start justify-content-lg-end">
+                <img class="mw-100 pe-md-5" src="assets/img/regalos.svg" alt="anillos"/>
+            </div>
+            <div class="col-md-7 offset-md-0 col-10 offset-1">
+                <h1 class="fuente-yesenova texto-l mt-5">Regalito</h1>
+                <h2 class="fuente-arsenal texto-m fw-normal separacion-lineas-s pt-4">
+                    Si querés hacernos un regalo, <br/>
+                    podes colaborar con nuestra Luna de miel...
+                </h2>
+                <h2 class="fuente-arsenal texto-m fw-normal separacion-lineas-s mb-3 informacion-cbu">
+                    <span class="verde-oscuro">Titular:</span> Joaquin Moreno <br>
+                    <span class="verde-oscuro">Banco:</span> <img alt="reba logo" src="https://comunidad.reba.com.ar/uploads/15a039c9fea728072ae775d0dda9fc36.png" width="20" height="20" style="margin-top: -2px;"> Reba<br>
+                    <span class="verde-oscuro">CBU:</span> <span>4150999718011010900021</span> <br>
+                    <span class="verde-oscuro">Alias:</span> <span>joaco.y.meli</span> <br>
+                </h2>
+                <button onclick="copiarAClipboard('4150999718011010900021')" class="btn boton boton-adaptable fondo-verde">Copiar CBU!</button>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    sobre.addEventListener("mouseenter", function() {
-        cuerpoDocumento.classList.add("animado");
-    }, false);
+<link href="assets/css/jquery.classycountdown.min.css" rel="stylesheet">
 
-    sobre.addEventListener("mouseleave", function() {
-        cuerpoDocumento.classList.remove("animado");
-    }, false);
-</script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script src="assets/js/jquery.knob.js"></script>
+<script src="assets/js/jquery.throttle.js"></script>
+<script src="assets/js/jquery.classycountdown.min.js"></script>
+<script type="application/javascript" src="assets/js/web.js"></script>
 </body>
 </html>
