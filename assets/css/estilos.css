@@ -227,6 +227,12 @@ body.animado {
         left: -2rem;
     }
 
+    .boton-adaptable {
+        padding: 0.9rem 2.5rem;
+        width: 100%;
+        display: block;
+    }
+
     .texto-xl {
         font-size: 3.5rem;
     }
