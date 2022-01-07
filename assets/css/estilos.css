@@ -7,12 +7,16 @@
     --fondo-principal-2: url("../img/fondo-principal-2.png");
 
     --fondo-subrayado: url("../img/subrayado-hola.svg");
-
+    --fondo-pintitas: url("../img/pintitas-fondo-confirmacion.svg");
 
     --verde-oscuro: #329363;
     --verde-musgo: #5A8D7D;
     --verde-claro: #94DFC0;
+    --verde-claro-fondo: #93C3AF;
     --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris-deshabilitado: #6F6F6F;
+
 
     --fondo-carta: #FDFDFD;
     --color-carta-dorso: #B1DBCE;
@@ -44,14 +48,41 @@ body.animado {
     width: 100%;
 }
 
-.fondo-verde {
+.fondo-verde, .fondo-verde:hover {
     background-color: var(--verde-musgo);
     color: var(--blanco);
 }
 
-.fondo-verde:hover {
-    background-color: var(--verde-musgo);
+.fondo-negro {
+    background-color: var(--negro);
     color: var(--blanco);
+}
+
+.fondo-negro:hover {
+    background-color: var(--gris-deshabilitado);
+    color: var(--blanco);
+}
+
+.sin-fondo {
+    background-color: transparent;
+    color: var(--negro);
+}
+
+.borde-gris {
+    border: 1px solid var(--gris-deshabilitado)!important;
+}
+
+.color-gris {
+    color: var(--gris-deshabilitado);
+}
+
+.fondo-verde-claro {
+    background-color: var(--verde-claro-fondo);
+    color: var(--blanco);
+}
+
+.fondo-pintitas {
+    background-image: var(--fondo-pintitas);
 }
 
 .verde-oscuro {
@@ -97,7 +128,7 @@ body.animado {
 .boton {
     font-family: var(--tipografia-yesenova);
     text-align: center;
-    padding: 0.9rem 3.8rem;
+    padding: 0.9rem 3.2rem;
     border-radius: 9px;
     border: 0;
     font-size: 1.5rem;
@@ -172,14 +203,14 @@ body.animado {
     padding: 0.75rem 0.75rem 0;
 }
 
-.sobre .carta .interior .texto {
+.sobre .carta .interior .texto, .firma .texto {
     margin-top: 1.375rem;
     display: inline-block;
     width: 65%;
     text-align: right;
 }
 
-.sobre .carta .interior .ampersan {
+.sobre .carta .interior .ampersan, .firma .ampersan {
     display: inline-block;
     width: 32%;
     text-align: center;
@@ -191,7 +222,7 @@ body.animado {
 
     color: var(--color-ampersan-carta);
 }
-.sobre .carta .interior .texto .letras {
+.sobre .carta .interior .texto .letras, .firma .texto .letras {
     font-family: var(--tipografia-yesenova);
     font-size: 3.938rem;
     font-style: normal;
