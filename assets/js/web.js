@@ -1,14 +1,21 @@
-function movimientoDeFondoAlPasarMouseSobreCarta() {
+function abrirSobreCuandoEsteVisibleALaMitadDeLaPantalla() {
     const sobre = $("#sobre");
     const cuerpoDocumento = $("body");
 
-    sobre.on('mouseenter', function () {
-        cuerpoDocumento.addClass("animado");
+    $(window).on('scroll', function () {
+        const alturaVentana = window.innerHeight;
+        const visibleCuandoEstaALaMitad = (window.innerHeight / 2) + 50;
+        const arribaDelSobre = sobre[0].getBoundingClientRect().top;
+
+        if (arribaDelSobre < alturaVentana - visibleCuandoEstaALaMitad) {
+            sobre.addClass("abierto");
+            cuerpoDocumento.addClass("animado");
+        }else{
+            sobre.removeClass("abierto");
+            cuerpoDocumento.removeClass("animado");
+        }
     });
 
-    sobre.on('mouseleave', function () {
-        cuerpoDocumento.removeClass("animado");
-    });
 }
 
 function inicializarCuentaAtras() {
@@ -65,5 +72,5 @@ function obtenerNombre() {
 }
 
 inicializarCuentaAtras();
-movimientoDeFondoAlPasarMouseSobreCarta();
+abrirSobreCuandoEsteVisibleALaMitadDeLaPantalla();
 obtenerNombre();
