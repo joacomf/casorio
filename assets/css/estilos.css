@@ -261,6 +261,21 @@ body.animado {
     border-radius: 7px;
 }
 
+.fade-in-out {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+.fade-in-out.oculto {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.flotante {
+    position: absolute;
+    top: 0;
+}
+
 @media (max-width: 600px) {
     .flecha-verde-abajo {
         height: 6rem;
@@ -304,6 +319,10 @@ body.animado {
 
     .informacion-cbu {
         width: auto;
+    }
+
+    .seccion-pregunta {
+        height: 100%;
     }
 }
 

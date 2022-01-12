@@ -71,6 +71,13 @@ function obtenerNombre() {
     }
 }
 
+function accionesSobreBotonConfirmar() {
+    $("#botonSiPuedo").on('click', function () {
+        $("#popUpConfirmacion").removeClass('oculto');
+    })
+}
+
 inicializarCuentaAtras();
 abrirSobreCuandoEsteVisibleALaMitadDeLaPantalla();
 obtenerNombre();
+accionesSobreBotonConfirmar();
