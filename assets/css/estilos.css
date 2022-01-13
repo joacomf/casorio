@@ -287,7 +287,7 @@ body.animado {
 }
 
 #popUpConfirmacion .temblor {
-    animation: animacion-temblor 5s ease infinite;
+    animation: animacion-temblor 10s ease infinite;
     transform-origin: 50% 50%;
 }
 
