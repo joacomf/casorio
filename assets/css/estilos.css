@@ -13,6 +13,7 @@
     --verde-musgo: #5A8D7D;
     --verde-claro: #94DFC0;
     --verde-claro-fondo: #93C3AF;
+    --verde-intermedio: #609F85;
     --blanco: #FFFFFF;
     --negro: #000000;
     --gris-deshabilitado: #6F6F6F;
@@ -50,6 +51,11 @@ body.animado {
 
 .fondo-verde, .fondo-verde:hover {
     background-color: var(--verde-musgo);
+    color: var(--blanco);
+}
+
+.fondo-verde-intermedio, .fondo-verde-intermedio:hover {
+    background-color: var(--verde-intermedio);
     color: var(--blanco);
 }
 
