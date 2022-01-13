@@ -270,11 +270,12 @@ body.animado {
 .fade-in-out {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.4s ease;
+    transition: all 0.4s ease-in-out;
 }
 .fade-in-out.oculto {
     visibility: hidden;
     opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
 
 .flotante {
@@ -289,6 +290,66 @@ body.animado {
 #popUpConfirmacion .temblor {
     animation: animacion-temblor 10s ease infinite;
     transform-origin: 50% 50%;
+}
+
+.tooltip {
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+}
+
+.tooltip .bottom {
+
+    top:40px;
+    left:50%;
+    transform:translate(-50%, 0);
+    padding:10px 20px;
+    color:#FFFFFF;
+    background-color:#000000;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    visibility:hidden; opacity:0; transition:opacity 0.8s;
+}
+
+.tooltip:hover .bottom {
+    visibility:visible; opacity:1;
+}
+
+
+.tooltip-one {
+    padding: 10px 10px;
+    background: #000;
+    color: #FFF;
+    min-width: 150px;
+    max-width: 150px;
+    border-radius: 5px;
+    text-align: center;
+    filter: drop-shadow(0 3px 5px #ccc);
+    line-height: 1.5;
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 15px;
+}
+
+.tooltip-one:after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: -9px;
+    width: 18px;
+    height: 18px;
+    background: #000;
+    transform: rotate(45deg);
 }
 
 @keyframes animacion-temblor {

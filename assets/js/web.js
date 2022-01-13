@@ -56,9 +56,18 @@ function inicializarCuentaAtras() {
     });
 }
 
+function mostrarTooltip() {
+    $("#tooltipCBU").removeClass("oculto");
+    setTimeout(function () {
+        $("#tooltipCBU").addClass("oculto");
+    }, 4000)
+}
+
 function copiarAClipboard(valor) {
     navigator.clipboard.writeText(valor)
-        .then(() => alert("Se copió el CBU " + valor + " exitosamente"));
+        .then(() => {
+            mostrarTooltip()
+        });
 }
 
 function obtenerNombre() {
