@@ -4,10 +4,12 @@ function abrirSobreCuandoEsteVisibleALaMitadDeLaPantalla() {
 
     $(window).on('scroll', function () {
         const alturaVentana = window.innerHeight;
-        const visibleCuandoEstaALaMitad = (window.innerHeight / 2) + 50;
+        const mitadDeLaPantalla = (window.innerHeight / 2) + 50;
         const arribaDelSobre = sobre[0].getBoundingClientRect().top;
 
-        if (arribaDelSobre < alturaVentana - visibleCuandoEstaALaMitad) {
+        const elSobreApareceAMitadDeLaPantalla = arribaDelSobre < alturaVentana - mitadDeLaPantalla;
+
+        if (elSobreApareceAMitadDeLaPantalla) {
             sobre.addClass("abierto");
             cuerpoDocumento.addClass("animado");
         }else{
