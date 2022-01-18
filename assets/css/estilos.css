@@ -202,7 +202,7 @@ body.animado {
 }
 
 .sobre.abierto .carta {
-    top: 0;
+    top: -50px;
 }
 
 .sobre .carta .interior {
