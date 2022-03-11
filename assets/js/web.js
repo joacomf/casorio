@@ -88,7 +88,12 @@ function accionesSobreBotonConfirmar() {
     })
 }
 
+function irHastaElVideo() {
+    $('body').scrollTo('#seccionVideo');
+}
+
 inicializarCuentaAtras();
 abrirSobreCuandoEsteVisibleALaMitadDeLaPantalla();
 obtenerNombre();
 accionesSobreBotonConfirmar();
+irHastaElVideo();
