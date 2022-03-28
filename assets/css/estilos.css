@@ -74,6 +74,18 @@ body.animado {
     color: var(--negro);
 }
 
+.boton-borde {
+    background-color: transparent;
+    color: var(--verde-musgo);
+    border: 2px solid var(--verde-musgo)!important;
+    transition: all 0.4s ease;
+}
+
+.boton-borde:hover {
+    background-color: var(--verde-musgo);
+    color: var(--blanco);
+}
+
 .borde-gris {
     border: 1px solid var(--gris-deshabilitado)!important;
 }
@@ -93,6 +105,10 @@ body.animado {
 
 .verde-oscuro {
     color: var(--verde-oscuro);
+}
+
+.verde-musgo {
+    color: var(--verde-musgo);
 }
 
 .fuente-yesenova {
@@ -161,53 +177,6 @@ body.animado {
     left: -9rem;
 }
 
-.sobre {
-    position: relative;
-}
-
-.sobre img {
-    max-width: 100%;
-}
-
-.sobre .solapa {
-    position: absolute;
-    z-index: 0;
-}
-
-.sobre .solapa .dorso {
-    background-color: var(--color-carta-dorso);
-    margin-top: -0.063rem;
-    height: 30px;
-    width: 100%;
-}
-
-.sobre .interior {
-    padding-top: 0.675rem;
-    position: relative;
-    z-index: 1;
-}
-
-.sobre .carta {
-    position: absolute;
-    margin: 0 auto;
-    width: 85%;
-    top: 20%;
-    left: 0.625rem;
-    right: 0;
-    z-index: 3;
-
-    background: var(--fondo-carta);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-    transition: top 0.5s ease 0s;
-}
-
-.sobre.abierto .carta {
-    top: -70px;
-}
-
-.sobre .carta .interior {
-    padding: 0.75rem 0.75rem 0;
-}
 
 .sobre .carta .interior .texto, .firma .texto {
     margin-top: 1.375rem;
@@ -238,34 +207,6 @@ body.animado {
     text-align: right;
     color: var(--color-letras-carta);
 }
-.sobre .carta .fecha {
-    font-family: var(--tipografia-yesenova);
-    font-size: 22px;
-    line-height: 25px;
-    text-align: center;
-    margin-top: -10px;
-    padding-bottom: 30px;
-
-    color: var(--color-fecha-carta);
-}
-.sobre .cuerpo {
-    width: 100%;
-    position: absolute;
-    bottom: 1.525rem;
-    z-index: 4;
-}
-
-#contenedor_cuenta_atras * {
-    font-family: var(--tipografia-arsenal);
-}
-
-.informacion-cbu {
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 10px 15px;
-    margin: 0 -15px;
-    border-radius: 7px;
-}
 
 .fade-in-out {
     visibility: visible;
@@ -283,84 +224,8 @@ body.animado {
     top: 0;
 }
 
-#popUpConfirmacion.oculto .temblor {
-    animation: none;
-}
-
-#popUpConfirmacion .temblor {
-    animation: animacion-temblor 10s ease infinite;
-    transform-origin: 50% 50%;
-}
-
-.tooltip {
-    display:inline-block;
-    position:relative;
-    border-bottom:1px dotted #666;
-    text-align:left;
-}
-
-.tooltip .bottom {
-
-    top:40px;
-    left:50%;
-    transform:translate(-50%, 0);
-    padding:10px 20px;
-    color:#FFFFFF;
-    background-color:#000000;
-    font-weight:normal;
-    font-size:13px;
-    border-radius:8px;
-    position:absolute;
-    z-index:99999999;
-    box-sizing:border-box;
-    box-shadow:0 1px 8px rgba(0,0,0,0.5);
-    visibility:hidden; opacity:0; transition:opacity 0.8s;
-}
-
-.tooltip:hover .bottom {
-    visibility:visible; opacity:1;
-}
-
-
-.tooltip-one {
-    padding: 10px 10px;
-    background: #000;
-    color: #FFF;
-    min-width: 150px;
-    max-width: 150px;
-    border-radius: 5px;
-    text-align: center;
-    filter: drop-shadow(0 3px 5px #ccc);
-    line-height: 1.5;
-    position: absolute;
-    bottom: -55px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    font-size: 15px;
-}
-
-.tooltip-one:after {
-    content: "";
-    position: absolute;
-    top: -9px;
-    left: 50%;
-    margin-left: -9px;
-    width: 18px;
-    height: 18px;
-    background: #000;
-    transform: rotate(45deg);
-}
-
-@keyframes animacion-temblor {
-    0% { transform:translate(0,0) }
-    1.78571% { transform:translate(5px,0) }
-    3.57143% { transform:translate(0,0) }
-    5.35714% { transform:translate(5px,0) }
-    7.14286% { transform:translate(0,0) }
-    8.92857% { transform:translate(5px,0) }
-    10.71429% { transform:translate(0,0) }
-    100% { transform:translate(0,0) }
+.icono-foto {
+    font-size: 10rem;
 }
 
 @media (max-width: 600px) {
@@ -389,52 +254,6 @@ body.animado {
 
     .subrayado-hola::after {
         width: 45%;
-    }
-
-    .sobre .carta {
-        top: 12%;
-    }
-    .sobre.abierto .carta {
-        top: -16%;
-    }
-    .sobre .carta .interior .texto .letras {
-        font-size: 3.738rem;
-    }
-    .sobre .carta .interior .ampersan {
-        font-size: 7.313rem;
-    }
-
-    .informacion-cbu {
-        width: auto;
-    }
-
-    .seccion-pregunta {
-        height: 100%;
-    }
-
-    .ClassyCountdown-seconds {
-        display: none!important;
-    }
-
-    .ClassyCountdown-days, .ClassyCountdown-hours, .ClassyCountdown-minutes {
-        width: 29%!important;
-        height: auto!important;
-        margin: 5px!important;
-    }
-
-    .ClassyCountdown-days > div, .ClassyCountdown-hours > div, .ClassyCountdown-minutes > div{
-        width: 100%!important;
-        height: auto!important;
-    }
-
-    .ClassyCountdown-days > span, .ClassyCountdown-hours > span, .ClassyCountdown-minutes > span{
-        margin-top: -21px!important;
-        font-size: 20px!important;
-    }
-
-    .ClassyCountdown-days > div canvas, .ClassyCountdown-hours > div canvas, .ClassyCountdown-minutes > div canvas{
-        width: 100%!important;
-        height: auto!important;
     }
 }
 
